@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
+import 'package:roll_dice_app/components/gradient_container.dart';
 
 void main() {
   runApp(
@@ -18,20 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.teal,
-                Colors.tealAccent,
-              ],
-            ),
-          ),
-        ),
-      ),
+      home: Scaffold(body: GradientContainer(Colors.teal, Colors.tealAccent),),
     );
   }
 }
